@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+ul{
+  padding: 0;
+}
+li {
+  list-style: none;
+}  
+a {
+  text-decoration: none;
+  color: black;
+}
+img{
+  object-fit: cover;
+}
+body {
+  margin: 0;
+  font-family: "arial";
+  display: grid;
+  grid-template-columns:
+  [a]1fr[b]1fr[c]1fr[d]1fr[e]1fr[f]1fr[g];
+  grid-template-rows:
+  [a]100px[b]auto[c]auto[d]auto[e];
+  background-color: snow;
+}
+* {
+  box-sizing: border-box;
+}
+
+nav{
+  grid-column-start: a;
+  grid-column-end: g;
+  grid-row-start: a;
+  grid-row-end: b;
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(120, 120, 120);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav .logo{
+  height: 55px;
+  width: 100px;
+  background: url(../image/logo.png) no-repeat center / cover; 
+  margin-right: 40px;
+  border: solid 3px whitesmoke;
+  border-radius: 10px;
+}
+nav ul{
+  display: flex;
+}
+nav li{
+  margin-left: 5px; 
+  line-height: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  width: 120px;
+}
+nav li span{
+  font-size: .8rem;
+  font-weight: normal;
+}
+nav a{
+  color: whitesmoke;
+}
+nav li :hover{
+  color: orange;
+}
+
+.menubutton {
+  visibility: hidden;
+  z-index: 0;
+}
+.SpCaption{
+  visibility: hidden;
+  z-index: 0;
+}
+
+main{
+  grid-column-start: a;
+  grid-column-end: g;
+  grid-row-start:c;
+  grid-row-end: d;
+  display: grid;
+  grid-template-columns:
+  [p]1fr[q]4fr[r]1fr[s];
+  grid-template-rows:
+  [p]auto[q]auto[r];
+}
+* h2 span{
+  background: linear-gradient(transparent 60%, orange 0);
+  border-radius: 80% 50% 60% 5%/ 80% 75% 15% 75%;
+}
+#Career {
+  grid-column-start: q;
+  grid-column-end: r;
+  grid-row-start: p;
+  grid-row-end: q;
+  height: 600px;
+}
+#Career h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 100px auto;
+}
+#Career li{
+    display: flex;
+}
+#Career .date {
+    width: 120px;
+    margin-top: 20px;
+    margin-right: 5px;
+}
+#Career .content {
+    width: 100%;
+    border-left: solid 2px orange;
+    padding-left: 20px;
+    position: relative;
+}
+#Career .content:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: darkorange;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    transform: translate(calc(-50% - 1px), 50%);
+    border-radius: 100%;
+}
+
+
+#Hobby {
+  grid-column-start: q;
+  grid-column-end: r;
+  grid-row-start: q;
+  grid-row-end: r;
+  
+}
+#Hobby h2{
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 100px auto;
+}
+.slide-wrapper {
+    
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden; /* はみ出したスライドを隠す */
+  }
+  /*  ↓ スライド（コンテンツ） */
+  .slide { /*スライド全体 */
+    width: 300%;
+    height: 100%;
+    display: flex;
+    transition: all 0.3s;
+  }
+  .slide div { /* スライド */
+    width: 33.33%;
+    height: 100%;
+    font-size: 16px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .slide1 { /* スライドさせるために必要なクラス */
+    transform: translateX(0);
+  }
+  .slide2 { /* スライドさせるために必要なクラス */
+    transform: translateX(-33.33%);
+  }
+  .slide3 { /* スライドさせるために必要なクラス */
+    transform: translateX(-66.66%);
+  }
+  .slide div:nth-of-type(1){ /* 背景色 */
+    background-color: #E1F3FC;
+  }
+  .slide div:nth-of-type(2){ /* 背景色 */
+    background-color: #FCE8F0;
+  }
+  .slide div:nth-of-type(3){ /* 背景色 */
+    background-color: #E3F1E4;
+  }
+  /* ↓ 左右のボタン */
+  .next {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 10px;
+    bottom: 50%;
+    z-index: 10;
+    cursor: pointer;
+    border-top: solid 3px #000;
+    border-right: solid 3px #000;
+    -webkit-transform: rotate(45deg) translateY(50%);
+    transform: rotate(45deg) translateY(50%);
+  }
+  .prev {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 25px;
+    bottom: 50%;
+    z-index: 10;
+    cursor: pointer;
+    border-top: solid 3px #000;
+    border-right: solid 3px #000;
+    -webkit-transform: rotate(-135deg) translateY(-50%);
+    transform: rotate(-135deg) translateY(-50%);
+  }
+  /* ↓ インジケーター */
+  .indicator {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    column-gap: 18px;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+  }
+  .indicator li {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    list-style: none;
+    background-color: #fff;
+    border: 2px #000 solid;
+    cursor: pointer;
+  }
+  .indicator li:first-of-type {
+    background-color: #000;
+  }
+  
+
+
+footer{
+    grid-column-start: a;
+    grid-column-end: g;
+    grid-row-start: d;
+    grid-row-end: e;
+    height: 40px;
+    background-color: rgb(120, 120, 120);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    text-align: center;
+    font-size: .8rem;
+    color: whitesmoke;
+}
+
