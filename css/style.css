@@ -77,8 +77,6 @@ header{
   grid-row-start: b;
   grid-row-end: c;
   width: 100%;
-  height: 700px;
-  display: block;
   position: relative;
 }
 header .text{
@@ -170,100 +168,132 @@ main{
   grid-column-end: r;
   grid-row-start: p;
   grid-row-end: q;
-  height: 600px;
-  position: relative;
+  display: grid;
+  grid-template-columns:
+  [x0]1fr[x1]1fr[x2]1fr[x3]1fr[x4]1fr[x5]1fr[x6];
+  grid-template-rows:
+  [y0]auto[y1]auto[y2]auto[y3]auto[y4];
 }
 #About h2{
+  grid-column-start: x0;
+  grid-column-end: x6;
+  grid-row-start: y0;
+  grid-row-end: y1;
   text-align: center;
   font-size: 2.5rem;
-  margin: 100px auto;
+  margin: 100px auto 50px auto;
 }
 #About .saying{
-  position: absolute;
-  top: calc(50% + 50px);
-  right: 0;
-  transform: translateY(calc(-50% + 25px));
+  grid-column-start: x2;
+  grid-column-end: x6;
+  grid-row-start: y1;
+  grid-row-end: y4;
   font-size: 8rem;
+  line-height: .75em;
   letter-spacing: .1em;
   color: lightgray;
-  opacity: .2;
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-end;
+  justify-content: center;
+  opacity: .3;
 }
 #About .saying .s1{
-  letter-spacing: .24em;
+  letter-spacing: .26em;
+}
+#About .saying .s2{
+  letter-spacing: .18em;
 }
 #About .intro{
-  width: 60%;
-  display: inline-block;
+  grid-column-start: x0;
+  grid-column-end: x4;
+  grid-row-start: y2;
+  grid-row-end: y3;
   z-index: 30;
+}
+#About img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 30px;
+  z-index: 1;
+}
+#About .ProfileImg {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+#About .ProfileImg:after{
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: lightgray;
+  border-radius: 50%;
+  top: 15px;
+  left: 15px;
+  opacity: .5;
+  z-index: -1;
 }
 #About .intro .t1{
   font-size: 2rem;
 }
+#About .intro .t1 .spbr{
+  display: none;
+}
 #About .intro .t2{
-  font-size: 1rem;
   line-height: 2rem;
 }
 #About .pagelink{
   width: 50px;
   display: block;
-  font-size: 1rem;
   text-align: center;
   border-bottom: 1px solid black;
   margin-top: 20px;
 }
 #About .pagelink:hover{
   font-weight: bold;
-  font-size: 1.2rem;
   width: 80px;
   border-bottom: 1.2px solid black;
   transition: .2s;
 }
 
 #Skill{    
-  grid-column-start: p;
-  grid-column-end: s;
+  grid-column-start: q;
+  grid-column-end: r;
   grid-row-start: q;
   grid-row-end: r;
-  width: 100%;
-  height: 800px;
-  position: relative;
 }
 #Skill h2{
   text-align: center;
   font-size: 2.5rem;
-  margin: 100px auto;
+  margin: 100px auto 50px auto;
+}
+#Skill .contents{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 100px;
 }
 #Skill .content{
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-}
-#Skill ul{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-#Skill li{
-  max-width: 250px;
-  margin: 0 10px;
-  width: 20%;
+  margin: 10px 10px;
   border: solid 3px rgb(70, 70, 70);
-  padding: 20px 25px;
+  padding: 20px;
   text-align: center;
-}
-#Skill li meter{
-  margin-top: 10px;
-  width: 80%;
-}
-#Skill li p{
-  font-size: 1rem;
-  text-align: start;
 }
 #Skill img{
   width: 80%;
+}
+#Skill meter{
+  margin-top: 10px;
+  width: 80%;
+  height: 15px;
+}
+#Skill .content p{
+  text-align: left;
+  font-size: .9rem;
 }
 
 footer{
@@ -273,9 +303,6 @@ footer{
     grid-row-end: e;
     height: 40px;
     background-color: rgb(70, 70, 70);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
 }
 footer p{
@@ -319,6 +346,10 @@ footer .page-top::after {
   animation: 20s linear infinite rotation;
 }
 @keyframes rotation {
-  0% { transform: rotateZ(0);}
-  100% { transform: rotateZ(360deg); }
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg); 
+  }
 }

@@ -20,7 +20,7 @@ body {
   grid-template-columns:
   [a]1fr[b]1fr[c]1fr[d]1fr[e]1fr[f]1fr[g];
   grid-template-rows:
-  [a]100px[b]auto[c]auto[d]auto[e];
+  [a]100px[b]auto[c]auto[d];
   background-color: snow;
 }
 * {
@@ -75,7 +75,7 @@ nav li :hover{
   visibility: hidden;
   z-index: 0;
 }
-.SpCaption{
+.SpCaption2{
   visibility: hidden;
   z-index: 0;
 }
@@ -83,11 +83,11 @@ nav li :hover{
 main{
   grid-column-start: a;
   grid-column-end: g;
-  grid-row-start:c;
-  grid-row-end: d;
+  grid-row-start: b;
+  grid-row-end: c;
   display: grid;
   grid-template-columns:
-  [p]1fr[q]4fr[r]1fr[s];
+  [p]1fr[q]2fr[r]1fr[s];
   grid-template-rows:
   [p]auto[q]auto[r];
 }
@@ -100,160 +100,200 @@ main{
   grid-column-end: r;
   grid-row-start: p;
   grid-row-end: q;
-  height: 600px;
 }
 #Career h2{
-    text-align: center;
-    font-size: 2.5rem;
-    margin: 100px auto;
-}
-#Career li{
-    display: flex;
-}
-#Career .date {
-    width: 120px;
-    margin-top: 20px;
-    margin-right: 5px;
-}
-#Career .content {
-    width: 100%;
-    border-left: solid 2px orange;
-    padding-left: 20px;
-    position: relative;
-}
-#Career .content:before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    background: darkorange;
-    position: absolute;
-    top: 20px;
-    left: 0;
-    transform: translate(calc(-50% - 1px), 50%);
-    border-radius: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 100px auto 50px auto;
 }
 
+#Career li{
+  display: flex;
+}
+#Career .date {
+  width: 120px;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+#Career .content {
+  width: 100%;
+  border-left: solid 2px orange;
+  padding-left: 20px;
+  position: relative;
+}
+#Career .content h3{
+  font-size: 1rem;
+}
+#Career .content p{
+  font-size: .9rem;
+}
+#Career .content:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: darkorange;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  transform: translate(calc(-50% - 1px), 50%);
+  border-radius: 50%;
+}
 
 #Hobby {
   grid-column-start: q;
   grid-column-end: r;
   grid-row-start: q;
   grid-row-end: r;
-  
+  height: 850px;
+  text-align: center;
 }
 #Hobby h2{
-  text-align: center;
   font-size: 2.5rem;
-  margin: 100px auto;
+  margin: 100px auto 50px auto;
 }
-.slide-wrapper {
-    
-    width: 100%;
-    height: 300px;
-    position: relative;
-    overflow: hidden; /* はみ出したスライドを隠す */
-  }
-  /*  ↓ スライド（コンテンツ） */
-  .slide { /*スライド全体 */
-    width: 300%;
-    height: 100%;
-    display: flex;
-    transition: all 0.3s;
-  }
-  .slide div { /* スライド */
-    width: 33.33%;
-    height: 100%;
-    font-size: 16px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-  .slide1 { /* スライドさせるために必要なクラス */
-    transform: translateX(0);
-  }
-  .slide2 { /* スライドさせるために必要なクラス */
-    transform: translateX(-33.33%);
-  }
-  .slide3 { /* スライドさせるために必要なクラス */
-    transform: translateX(-66.66%);
-  }
-  .slide div:nth-of-type(1){ /* 背景色 */
-    background-color: #E1F3FC;
-  }
-  .slide div:nth-of-type(2){ /* 背景色 */
-    background-color: #FCE8F0;
-  }
-  .slide div:nth-of-type(3){ /* 背景色 */
-    background-color: #E3F1E4;
-  }
-  /* ↓ 左右のボタン */
-  .next {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    right: 10px;
-    bottom: 50%;
-    z-index: 10;
-    cursor: pointer;
-    border-top: solid 3px #000;
-    border-right: solid 3px #000;
-    -webkit-transform: rotate(45deg) translateY(50%);
-    transform: rotate(45deg) translateY(50%);
-  }
-  .prev {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    left: 25px;
-    bottom: 50%;
-    z-index: 10;
-    cursor: pointer;
-    border-top: solid 3px #000;
-    border-right: solid 3px #000;
-    -webkit-transform: rotate(-135deg) translateY(-50%);
-    transform: rotate(-135deg) translateY(-50%);
-  }
-  /* ↓ インジケーター */
-  .indicator {
-    width: 100%;
-    position: absolute;
-    bottom: 20px;
-    display: flex;
-    column-gap: 18px;
-    z-index: 10;
-    justify-content: center;
-    align-items: center;
-  }
-  .indicator li {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    list-style: none;
-    background-color: #fff;
-    border: 2px #000 solid;
-    cursor: pointer;
-  }
-  .indicator li:first-of-type {
-    background-color: #000;
-  }
-  
+
+#Hobby .slide-wrapper {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden; 
+  border: solid 5px rgb(70, 70, 70);
+  border-radius: 10px;
+}
+#Hobby .slide { 
+  width: 300%;
+  height: 100%;
+  display: flex;
+  transition: all 0.3s;
+}
+#Hobby .slide .img1 , .img2 , .img3 { 
+  width: 33.33%;
+  height: 100%;
+}
+#Hobby .img1{
+  background: url(../image/hobby1.png) no-repeat center / cover; 
+}
+#Hobby .img2{
+  background: url(../image/hobby2.png) no-repeat center / cover; 
+}
+#Hobby .img3{
+  background: url(../image/hobby2.png) no-repeat center / cover; 
+}
+#Hobby .slide1 { /* スライドさせるために必要なクラス */
+  transform: translateX(0);
+}
+#Hobby .slide2 { 
+  transform: translateX(-33.33%);
+}
+#Hobby .slide3 { 
+  transform: translateX(-66.66%);
+}
+#Hobby .prev {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 10px;
+  bottom: 50%;
+  z-index: 10;
+  cursor: pointer;
+  border-top: solid 3px orange;
+  border-right: solid 3px orange;
+  transform: rotate(-135deg) translateY(-50%);
+}
+#Hobby .next {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 0;
+  bottom: 50%;
+  z-index: 10;
+  cursor: pointer;
+  border-top: solid 3px orange;
+  border-right: solid 3px orange;
+  transform: rotate(45deg) translateY(50%);
+}
+#Hobby .indicator {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+#Hobby .indicator li {
+  width: 12px;
+  height: 12px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  border: 1px orange solid;
+  cursor: pointer;
+}
+#Hobby .indicator li:first-of-type {
+  background-color: orange;
+}
+
 
 
 footer{
     grid-column-start: a;
     grid-column-end: g;
-    grid-row-start: d;
-    grid-row-end: e;
+    grid-row-start: c;
+    grid-row-end: d;
     height: 40px;
     background-color: rgb(120, 120, 120);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 footer p{
     text-align: center;
     font-size: .8rem;
     color: whitesmoke;
+}
+footer .page-top {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: snow;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  transform: translateX(-50%);
+}
+footer .page-top::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  margin-top: 5px;
+  border-top: solid 2px black;
+  border-right: solid 2px black;
+  transform: rotate(-45deg);
+}
+footer .page-top::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: dotted 2px black;
+  border-radius: 50%;
+  position: absolute;
+  left: -.5;
+  bottom: -.5;
+  animation: 20s linear infinite rotation;
+}
+@keyframes rotation {
+  0% { 
+    transform: rotateZ(0);
+  }
+  100% { 
+    transform: rotateZ(360deg); 
+  }
 }
 

@@ -2,11 +2,8 @@
 
 @media (max-width: 1440px) {
     
-    header{
-        height: 600px;
-    }
     header h1{
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
     #MainImg{
         height: 600px;
@@ -14,12 +11,24 @@
     #MainImg li{ 
         height: 500px;
     }
+    #About .saying{
+        font-size: 6rem;
+      }
+    #About .intro .t1{
+        font-size: 1.5rem;
+    }
+    #Hobby {
+        height: 750px;
+    }
+    #Hobby .slide-wrapper {
+        height: 400px;
+    }
+
 }
 
 @media (max-width: 800px) {
 
     header{
-        height: 400px;
         visibility: hidden;
         transform: translateX(-100%);
         opacity: 0;
@@ -127,5 +136,133 @@
         font-size: 1.2rem;
     }
 
+    .SpCaption2{
+        visibility: visible;
+        grid-column-start: a;
+        grid-column-end: g;
+        grid-row-start: a;
+        grid-row-end: b;
+        background-color: rgb(120, 120, 120);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .SpCaption2 .logo{
+        height: 40px;
+        width: 70px;
+        background: url(../image/logo.png) no-repeat center / cover; 
+        margin-right: 20px;
+        border: solid 3px whitesmoke;
+        border-radius: 10px;
+    }
+    .SpCaption2 h2{
+        color: whitesmoke;
+        text-align: center;
+        font-size: 1.2rem;
+    }
 
+    #About {
+        height: 400px;
+    }
+    #About h2{
+        font-size: 1.5rem;
+        margin: 50px auto;
+    }
+    #About .saying{
+        font-size: 3.5rem;
+    }
+    #About img {
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+    }
+    #About .ProfileImg {
+        margin-bottom: 20px;
+    }
+    #About .ProfileImg:after{
+        width: 60px;
+        height: 60px;
+        top: 10px;
+        left: 10px;
+    }
+    #About .intro .t1{
+        font-size: 1.2rem;
+    }
+    #About .intro .t1 .spbr{
+        display: block;
+    }
+    #About .intro .t2{
+        font-size: .8rem;
+        line-height: 1.2rem;
+    }
+
+    #Skill h2{
+        font-size: 1.5rem;
+        margin: 50px auto;
+    }
+    #Skill .contents{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 5px;
+      }
+    #Skill img{
+        width: 60%;
+    }
+    #Skill meter{
+        width: 60%;
+        height: 10px;
+    }
+    #Skill .content p{
+        font-size: .8rem;
+    }
+    #Career h2{
+        font-size: 1.5rem;
+        margin: 50px auto;
+    }
+    #Career .date {
+        width: 120px;
+        margin-top: 15px;
+        margin-right: 10px;
+        font-size: .9rem;
+      }
+      #Career .content {
+        width: 100%;
+        border-left: solid 2px orange;
+        padding-left: 20px;
+        position: relative;
+      }
+      #Career .content h3{
+        font-size: .9rem;
+      }
+      #Career .content p{
+        font-size: .8rem;
+      }
+    #Hobby h2{
+        font-size: 1.5rem;
+        margin: 50px auto;
+    }
+    #Hobby {
+        height: 600px;
+    }
+    #Hobby .slide-wrapper {
+        height: 300px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    
+    #MainImg{
+        height: 300px;
+    }
+    #MainImg li{ 
+        height: 200px;
+    }
+
+    #Hobby {
+        height: 500px;
+    }
+    #Hobby .slide-wrapper {
+        height: 200px;
+    }
 }
