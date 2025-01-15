@@ -8,22 +8,12 @@
     #MainImg{
         height: 600px;
     }
-    #MainImg li{ 
-        height: 500px;
-    }
     #About .saying{
         font-size: 6rem;
       }
     #About .intro .t1{
         font-size: 1.5rem;
     }
-    #Hobby {
-        height: 750px;
-    }
-    #Hobby .slide-wrapper {
-        height: 400px;
-    }
-
 }
 
 @media (max-width: 800px) {
@@ -40,7 +30,6 @@
     }
     #MainImg li{ 
         width: 100%;
-        height: 300px;
     }
 
     nav{
@@ -182,7 +171,7 @@
     #About .ProfileImg:after{
         width: 60px;
         height: 60px;
-        top: 10px;
+        top: 20px;
         left: 10px;
     }
     #About .intro .t1{
@@ -215,7 +204,10 @@
     #Skill .content p{
         font-size: .8rem;
     }
-
+    #Career {
+        grid-column-start: q;
+        grid-column-end: u;
+    }
     #Career h2{
         font-size: 1.5rem;
         margin: 50px auto;
@@ -229,18 +221,14 @@
     #Career .content p{
         font-size: .8rem;
     }
-
+    #Hobby {
+        grid-column-start: q;
+        grid-column-end: u;
+    }
     #Hobby h2{
         font-size: 1.5rem;
         margin: 50px auto;
     }
-    #Hobby {
-        height: 600px;
-    }
-    #Hobby .slide-wrapper {
-        height: 300px;
-    }
-
 }
 
 @media (max-width: 500px) {
@@ -248,14 +236,5 @@
     #MainImg{
         height: 300px;
     }
-    #MainImg li{ 
-        height: 200px;
-    }
-
-    #Hobby {
-        height: 500px;
-    }
-    #Hobby .slide-wrapper {
-        height: 200px;
-    }
+    
 }

@@ -87,7 +87,7 @@ main{
   grid-row-end: c;
   display: grid;
   grid-template-columns:
-  [p]1fr[q]2fr[r]1fr[s];
+  [p]1fr[q]1fr[r]2fr[s]2fr[t]1fr[u]1fr[v];
   grid-template-rows:
   [p]auto[q]auto[r];
 }
@@ -96,8 +96,8 @@ main{
   border-radius: 80% 50% 60% 5%/ 80% 75% 15% 75%;
 }
 #Career {
-  grid-column-start: q;
-  grid-column-end: r;
+  grid-column-start: r;
+  grid-column-end: t;
   grid-row-start: p;
   grid-row-end: q;
 }
@@ -111,14 +111,14 @@ main{
   display: flex;
 }
 #Career .date {
-  width: 120px;
+  width: 100px;
   margin-top: 15px;
   margin-right: 20px;
 }
 #Career .content {
   width: 100%;
   border-left: solid 2px orange;
-  padding-left: 40px;
+  padding-left: 30px;
   position: relative;
 }
 #Career .content h3{
@@ -140,35 +140,31 @@ main{
 }
 
 #Hobby {
-  grid-column-start: q;
-  grid-column-end: r;
+  grid-column-start: r;
+  grid-column-end: t;
   grid-row-start: q;
   grid-row-end: r;
-  height: 850px;
   text-align: center;
 }
 #Hobby h2{
   font-size: 2.5rem;
   margin: 100px auto 50px auto;
 }
-
-#Hobby .slide-wrapper {
-  width: 100%;
-  height: 500px;
+#Hobby .carousel {
   position: relative;
-  overflow: hidden; 
-  border: solid 5px rgb(70, 70, 70);
-  border-radius: 10px;
+  overflow: hidden;
+  border: solid 3px rgb(70, 70, 70);
+  border-radius: 5px;
+  margin-bottom: 100px;
 }
-#Hobby .slide { 
-  width: 300%;
-  height: 100%;
+#Hobby .carousel-track {
   display: flex;
-  transition: all 0.3s;
+  transition: transform 0.5s ease;
+  width: 100%;
 }
-#Hobby .slide .img1 , .img2 , .img3 { 
-  width: 33.33%;
-  height: 100%;
+#Hobby .carousel-item {
+  min-width: 100%;
+  height: 60vh;
 }
 #Hobby .img1{
   background: url(../image/hobby1.png) no-repeat center / cover; 
@@ -177,64 +173,26 @@ main{
   background: url(../image/hobby2.png) no-repeat center / cover; 
 }
 #Hobby .img3{
-  background: url(../image/hobby2.png) no-repeat center / cover; 
+  background: url(../image/hobby3.png) no-repeat center / cover; 
 }
-#Hobby .slide1 { /* スライドさせるために必要なクラス */
-  transform: translateX(0);
-}
-#Hobby .slide2 { 
-  transform: translateX(-33.33%);
-}
-#Hobby .slide3 { 
-  transform: translateX(-66.66%);
-}
-#Hobby .prev {
+#Hobby .button {
   position: absolute;
-  width: 15px;
-  height: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: orange;
+  border-radius: 2px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+#Hobby .button.prev {
   left: 10px;
-  bottom: 50%;
-  z-index: 10;
-  cursor: pointer;
-  border-top: solid 3px orange;
-  border-right: solid 3px orange;
-  transform: rotate(-135deg) translateY(-50%);
 }
-#Hobby .next {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  right: 0;
-  bottom: 50%;
-  z-index: 10;
-  cursor: pointer;
-  border-top: solid 3px orange;
-  border-right: solid 3px orange;
-  transform: rotate(45deg) translateY(50%);
+#Hobby .button.next {
+  right: 10px;
 }
-#Hobby .indicator {
-  width: 100%;
-  position: absolute;
-  bottom: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
-#Hobby .indicator li {
-  width: 12px;
-  height: 12px;
-  margin: 0 10px;
-  border-radius: 50%;
-  background-color: whitesmoke;
-  border: 1px orange solid;
-  cursor: pointer;
-}
-#Hobby .indicator li:first-of-type {
-  background-color: orange;
-}
-
-
 
 footer{
     grid-column-start: a;

@@ -113,7 +113,7 @@ header h1 .name{
   border: solid 5px rgb(70, 70, 70);
   border-radius: 10px;
   width: 90%;
-  height: 600px;
+  height: 80%;
 }
 #MainImg .img1{
   background: url(../image/main1.jpg) no-repeat center / cover; 
