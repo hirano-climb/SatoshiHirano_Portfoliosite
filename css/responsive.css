@@ -1,12 +1,12 @@
 @charset "utf-8";
 
-@media (max-width: 1440px) {
+@media (max-width: 1024px) {
     
     header h1{
         font-size: 3rem;
     }
     #MainImg{
-        height: 600px;
+        height: 500px;
     }
     #About .saying{
         font-size: 6rem;
@@ -14,9 +14,12 @@
     #About .intro .t1{
         font-size: 1.5rem;
     }
+    #Hobby .carousel {
+        height: 360px;
+    }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 756px) {
 
     header{
         visibility: hidden;
@@ -26,7 +29,7 @@
     #MainImg{
         grid-column-start: b;
         grid-column-end: f;
-        height: 400px;
+        height: 300px;
     }
     #MainImg li{ 
         width: 100%;
@@ -229,12 +232,7 @@
         font-size: 1.5rem;
         margin: 50px auto;
     }
-}
-
-@media (max-width: 500px) {
-    
-    #MainImg{
+    #Hobby .carousel {
         height: 300px;
     }
-    
 }

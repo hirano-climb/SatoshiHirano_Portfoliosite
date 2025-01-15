@@ -114,6 +114,7 @@ main{
   width: 100px;
   margin-top: 15px;
   margin-right: 20px;
+  white-space: nowrap;
 }
 #Career .content {
   width: 100%;
@@ -155,16 +156,17 @@ main{
   overflow: hidden;
   border: solid 3px rgb(70, 70, 70);
   border-radius: 5px;
+  height: 480px;
   margin-bottom: 100px;
 }
 #Hobby .carousel-track {
   display: flex;
   transition: transform 0.5s ease;
   width: 100%;
+  height: 100%;
 }
 #Hobby .carousel-item {
   min-width: 100%;
-  height: 60vh;
 }
 #Hobby .img1{
   background: url(../image/hobby1.png) no-repeat center / cover; 
