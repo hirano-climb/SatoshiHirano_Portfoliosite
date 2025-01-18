@@ -155,7 +155,7 @@ main{
   grid-row-end: d;
   display: grid;
   grid-template-columns:
-  [p]1fr[q]4fr[r]1fr[s];
+  [p]1fr[q]1fr[r]1fr[s]1fr[t]1fr[u]1fr[v];
   grid-template-rows:
   [p]auto[q]auto[r];
 }
@@ -165,7 +165,7 @@ main{
 }
 #About {
   grid-column-start: q;
-  grid-column-end: r;
+  grid-column-end: u;
   grid-row-start: p;
   grid-row-end: q;
   display: grid;
@@ -262,7 +262,7 @@ main{
 
 #Skill{    
   grid-column-start: q;
-  grid-column-end: r;
+  grid-column-end: u;
   grid-row-start: q;
   grid-row-end: r;
 }

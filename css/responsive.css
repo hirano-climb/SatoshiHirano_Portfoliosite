@@ -187,16 +187,14 @@
         font-size: .8rem;
         line-height: 1.2rem;
     }
-
+    
     #Skill h2{
         font-size: 1.5rem;
         margin: 50px auto;
     }
     #Skill .contents{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 5px;
-      }
+    }
     #Skill img{
         width: 60%;
     }
@@ -236,3 +234,4 @@
         height: 300px;
     }
 }
+
