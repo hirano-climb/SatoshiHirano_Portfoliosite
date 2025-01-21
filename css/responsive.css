@@ -14,6 +14,15 @@
     #About .intro .t1{
         font-size: 1.5rem;
     }
+
+    #Career {
+        grid-column-start: q;
+        grid-column-end: u;
+    }
+    #Hobby {
+        grid-column-start: q;
+        grid-column-end: u;      
+    }
     #Hobby .carousel {
         height: 360px;
     }
@@ -62,8 +71,8 @@
     }
     .menubutton {
         position: fixed;
-        top: 30px;
-        left: 30px;
+        top: 20px;
+        left: 20px;
         z-index: 100;
         width: 40px;
         height: 40px;
@@ -113,6 +122,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 80px;
     }
     .SpCaption .logo{
         height: 40px;
@@ -123,31 +133,6 @@
         border-radius: 10px;
     }
     .SpCaption h2{
-        color: whitesmoke;
-        text-align: center;
-        font-size: 1.2rem;
-    }
-
-    .SpCaption2{
-        visibility: visible;
-        grid-column-start: a;
-        grid-column-end: g;
-        grid-row-start: a;
-        grid-row-end: b;
-        background-color: rgb(120, 120, 120);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .SpCaption2 .logo{
-        height: 40px;
-        width: 70px;
-        background: url(../image/logo.png) no-repeat center / cover; 
-        margin-right: 20px;
-        border: solid 3px whitesmoke;
-        border-radius: 10px;
-    }
-    .SpCaption2 h2{
         color: whitesmoke;
         text-align: center;
         font-size: 1.2rem;
@@ -187,7 +172,20 @@
         font-size: .8rem;
         line-height: 1.2rem;
     }
+    #About .pagelink{
+        width: 60px;
+        font-size: 1rem;
+    }
+    #About .pagelink:hover{
+        width: 90px;    
+    }
     
+    #Skill{    
+        grid-column-start: r;
+        grid-column-end: t;
+        grid-row-start: q;
+        grid-row-end: r;
+    }
     #Skill h2{
         font-size: 1.5rem;
         margin: 50px auto;
@@ -205,9 +203,18 @@
     #Skill .content p{
         font-size: .8rem;
     }
-    #Career {
-        grid-column-start: q;
-        grid-column-end: u;
+
+    #Product h2{
+        font-size: 1.5rem;
+        margin: 50px auto;
+    }
+    #Product .content p{
+        font-size: 1rem;
+    }
+
+    .about h2{
+        margin: 20px auto 30px auto;
+        font-size: 2rem;
     }
     #Career h2{
         font-size: 1.5rem;
@@ -222,10 +229,18 @@
     #Career .content p{
         font-size: .8rem;
     }
-    #Hobby {
-        grid-column-start: q;
-        grid-column-end: u;
+
+    #Strength h2{
+        font-size: 1.5rem;
+        margin: 50px auto;
     }
+    #Strength .content .title {
+        font-size: .9rem;
+    }
+    #Strength .content p{
+        font-size: .8rem;
+    }
+
     #Hobby h2{
         font-size: 1.5rem;
         margin: 50px auto;
@@ -233,5 +248,19 @@
     #Hobby .carousel {
         height: 300px;
     }
+
+    .product h2{
+        margin: 20px auto 30px auto;
+        font-size: 2rem;
+    }
+    .product .monitor {
+        border: solid .6em rgb(40, 40, 40);
+    }
+    .product p, a{
+        font-size: .9rem;
+    }
+   
+
+
 }
 

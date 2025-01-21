@@ -20,7 +20,7 @@ body {
   grid-template-columns:
   [a]1fr[b]1fr[c]1fr[d]1fr[e]1fr[f]1fr[g];
   grid-template-rows:
-  [a]100px[b]auto[c]auto[d]auto[e];
+  [a]100px[b]auto[c]auto[d]40px[e];
   background-color: snow;
 }
 * {
@@ -157,7 +157,7 @@ main{
   grid-template-columns:
   [p]1fr[q]1fr[r]1fr[s]1fr[t]1fr[u]1fr[v];
   grid-template-rows:
-  [p]auto[q]auto[r];
+  [p]auto[q]auto[r]auto[s];
 }
 * h2 span{
   background: linear-gradient(transparent 60%, orange 0);
@@ -247,15 +247,16 @@ main{
   line-height: 2rem;
 }
 #About .pagelink{
-  width: 50px;
+  width: 80px;
   display: block;
   text-align: center;
   border-bottom: 1px solid black;
   margin-top: 20px;
+  font-size: 1.25rem;
 }
 #About .pagelink:hover{
   font-weight: bold;
-  width: 80px;
+  width: 120px;
   border-bottom: 1.2px solid black;
   transition: .2s;
 }
@@ -273,27 +274,92 @@ main{
 }
 #Skill .contents{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 10px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 #Skill .content{
-  margin: 10px 10px;
   border: solid 3px rgb(70, 70, 70);
+  border-radius: 5px;
   padding: 20px;
   text-align: center;
 }
 #Skill img{
   width: 80%;
 }
-#Skill meter{
-  margin-top: 10px;
-  width: 80%;
-  height: 15px;
+
+#Product{    
+  grid-column-start: q;
+  grid-column-end: u;
+  grid-row-start: r;
+  grid-row-end: s;
 }
-#Skill .content p{
-  text-align: left;
-  font-size: .9rem;
+#Product h2{
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 100px auto 50px auto;
+}
+#Product .contents{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 150px;
+}
+#Product .content{
+  border: solid 3px rgb(70, 70, 70);
+  border-radius: 5px;
+  padding: 2em 1em 1em 1em;
+}
+#Product a{
+  position: relative;
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}
+#Product img{
+  width: 100%;
+  border: solid 1px rgb(70, 70, 70);
+  border-radius: 5px;
+  display: block;
+}
+#Product a:before{
+  content:"";
+  width: 100%;
+  aspect-ratio: 1.49;
+  position:absolute;
+  background:rgb(70, 70, 70);
+  border-radius: 5px;
+  opacity:0;
+  z-index:2;
+  transition:0.3s;
+}
+#Product a:after{
+  content:"More";
+  display: block;
+  padding: .5em;
+  font-weight:bold;
+  letter-spacing: .1em;
+  color:whitesmoke;
+  border:solid 2px whitesmoke;
+  border-radius:5px;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  opacity:0;
+  z-index:3;
+  transition:0.3s;
+}
+#Product a:hover:before{
+  opacity:0.5;
+}
+#Product a:hover:after{
+  opacity:1;
+  transform: translate(-50%, -50%);
+}
+#Product .content p{
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 footer{
