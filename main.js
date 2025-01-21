@@ -1,3 +1,12 @@
+const pageTopBtn = document.querySelector(".page-top");
+pageTopBtn.addEventListener("click", ()=> {
+    window.scrollTo({
+        top: 0, 
+        behavior: "smooth" 
+    });
+});
+
+
 const menubutton = document.querySelector(".menubutton");
 const nav = document.querySelector("nav");
 const links = document.querySelectorAll("nav a");
@@ -23,15 +32,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           behavior: 'smooth'
       });
   });
-});
-
-
-const pageTopBtn = document.querySelector(".page-top");
-pageTopBtn.addEventListener("click", ()=> {
-    window.scrollTo({
-        top: 0, 
-        behavior: "smooth" 
-    });
 });
 
 
