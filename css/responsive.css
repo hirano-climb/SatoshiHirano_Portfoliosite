@@ -191,6 +191,7 @@
         margin: 50px auto;
     }
     #Skill .contents{
+        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
         gap: 5px;
     }
     #Skill img{
