@@ -251,7 +251,7 @@
     }
 
     .product h2{
-        margin: 20px auto 30px auto;
+        margin: 20px auto 50px auto;
         font-size: 2rem;
     }
     .product .monitor {
@@ -260,7 +260,9 @@
     .product p, a{
         font-size: .9rem;
     }
-   
+    .product a{
+        margin-top: 20px;
+    }
 
 
 }
