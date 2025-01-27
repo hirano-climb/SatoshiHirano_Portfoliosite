@@ -1,3 +1,4 @@
+//ページトップへのスムーススクロール
 const pageTopBtn = document.querySelector(".page-top");
 pageTopBtn.addEventListener("click", ()=> {
     window.scrollTo({
@@ -6,7 +7,7 @@ pageTopBtn.addEventListener("click", ()=> {
     });
 });
 
-
+//ハンバーガーメニューの開閉
 const menubutton = document.querySelector(".menubutton");
 const nav = document.querySelector("nav");
 const links = document.querySelectorAll("nav a");
@@ -21,7 +22,7 @@ links.forEach(link => {
     });
 });
 
-
+//idへのスムーススクロール
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
       e.preventDefault();
@@ -34,10 +35,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-
-const track = document.querySelector('.carousel-track');
-const items = document.querySelectorAll('.carousel-item');
+//画像の左方向スクロール
+const track = document.querySelector('.carouseltrack');
+const items = document.querySelectorAll('.carouselitem');
 let currentIndex = 0;
+const nextButton = document.querySelector('.button.next');
+const prevButton = document.querySelector('.button.prev');
+let autoScrollInterval;
 function updatePosition() {
     track.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
@@ -49,10 +53,6 @@ function moveToPrev() {
     currentIndex = (currentIndex - 1 + items.length) % items.length;
     updatePosition();
 }
-
-const nextButton = document.querySelector('.button.next');
-const prevButton = document.querySelector('.button.prev');
-let autoScrollInterval;
 function resetAutoScroll() {
     clearInterval(autoScrollInterval);
     autoScrollInterval = setInterval(moveToNext, 3000);
@@ -65,5 +65,4 @@ prevButton.addEventListener('click', () => {
     moveToPrev();
     resetAutoScroll();
 });
-
 autoScrollInterval = setInterval(moveToNext, 3000);

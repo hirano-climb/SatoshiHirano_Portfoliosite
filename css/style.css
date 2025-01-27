@@ -173,6 +173,7 @@ main{
   [x0]1fr[x1]1fr[x2]1fr[x3]1fr[x4]1fr[x5]1fr[x6];
   grid-template-rows:
   [y0]auto[y1]auto[y2]auto[y3]auto[y4];
+  margin-bottom: 50px;
 }
 #About h2{
   grid-column-start: x0;
@@ -266,6 +267,7 @@ main{
   grid-column-end: u;
   grid-row-start: q;
   grid-row-end: r;
+  margin-bottom: 50px;
 }
 #Skill h2{
   text-align: center;
@@ -276,7 +278,6 @@ main{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 10px;
-  margin-bottom: 50px;
 }
 #Skill .content{
   border: solid 3px rgb(70, 70, 70);
@@ -293,6 +294,7 @@ main{
   grid-column-end: u;
   grid-row-start: r;
   grid-row-end: s;
+  margin-bottom: 200px;
 }
 #Product h2{
   text-align: center;
@@ -303,7 +305,6 @@ main{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 30px;
-  margin-bottom: 150px;
 }
 #Product .content{
   border: solid 3px rgb(70, 70, 70);

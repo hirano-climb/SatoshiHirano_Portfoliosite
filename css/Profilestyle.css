@@ -106,7 +106,7 @@ main{
   text-align: left;
   font-size: 3rem;
   letter-spacing: .1em;
-  margin: 50px auto 0 auto;
+  margin: 100px auto 50px auto;
   border-bottom: 2px solid rgb(70,70,70);
   display: block;
 }
@@ -115,6 +115,7 @@ main{
   grid-column-end: t;
   grid-row-start: q;
   grid-row-end: r;
+  margin-bottom: 50px;
 }
 #Career h2{
   font-size: 2.5rem;
@@ -158,6 +159,7 @@ main{
   grid-column-end: u;
   grid-row-start: r;
   grid-row-end: s;
+  margin-bottom: 50px;
 }
 #Strength h2{
   text-align: center;
@@ -174,7 +176,7 @@ main{
 }
 #Strength .content {
   position: relative;
-  margin: 20px 40px;
+  margin: 30px 40px 0 40px;
   border: double 5px orange;
   border-radius: 15%;
   max-width: 280px;
@@ -189,7 +191,7 @@ main{
   transform: translate(-50% ,50%);
   padding: 0 5px;
   line-height: 1em;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   background: snow;
   color: black;
   font-weight: bold;
@@ -208,11 +210,12 @@ main{
   grid-column-end: u;
   grid-row-start: s;
   grid-row-end: t;
-  text-align: right;
+  margin-bottom: 200px;
 }
 #Hobby h2{
   font-size: 2.5rem;
   margin: 100px auto 50px auto;
+  text-align: right;
 }
 #Hobby .carousel {
   position: relative;
@@ -220,15 +223,14 @@ main{
   border: solid 3px rgb(70, 70, 70);
   border-radius: 5px;
   height: 480px;
-  margin-bottom: 100px;
 }
-#Hobby .carousel-track {
+#Hobby .carouseltrack {
   display: flex;
   transition: transform 0.5s ease;
   width: 100%;
   height: 100%;
 }
-#Hobby .carousel-item {
+#Hobby .carouselitem {
   min-width: 100%;
 }
 #Hobby .img1{
@@ -257,6 +259,11 @@ main{
 }
 #Hobby .button.next {
   right: 10px;
+}
+#Hobby .text{
+  text-align: right;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 footer{

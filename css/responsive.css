@@ -204,7 +204,9 @@
     #Skill .content p{
         font-size: .8rem;
     }
-
+    #Product{    
+        margin-bottom: 150px;
+    }
     #Product h2{
         font-size: 1.5rem;
         margin: 50px auto;
@@ -214,7 +216,7 @@
     }
 
     .about h2{
-        margin: 20px auto 30px auto;
+        margin: 50px auto;
         font-size: 2rem;
     }
     #Career h2{
@@ -236,12 +238,15 @@
         margin: 50px auto;
     }
     #Strength .content .title {
-        font-size: .9rem;
+        font-size: 1rem;
     }
     #Strength .content p{
         font-size: .8rem;
     }
 
+    #Hobby {
+        margin-bottom: 150px;
+    }
     #Hobby h2{
         font-size: 1.5rem;
         margin: 50px auto;
@@ -249,19 +254,23 @@
     #Hobby .carousel {
         height: 300px;
     }
+    #Hobby .text{
+        text-align: center;
+        font-size: .9rem;
+    }
 
     .product h2{
-        margin: 20px auto 50px auto;
+        margin: 50px auto 0 auto;
         font-size: 2rem;
+    }
+    .product .stand{
+        margin: 50px auto 50px auto;
     }
     .product .monitor {
         border: solid .6em rgb(40, 40, 40);
     }
     .product p, a{
         font-size: .9rem;
-    }
-    .product a{
-        margin-top: 20px;
     }
 
 
