@@ -122,8 +122,24 @@ main{
   box-shadow: unset;
   transform: translate(4px,4px);
 }
+.product .url_btn{
+  display: inline-block;
+  text-align: center;
+  padding: .5em;
+  color: whitesmoke;
+  letter-spacing: .1em;
+  background-color: mediumseagreen;
+  border-radius: 5px;
+  box-shadow: 4px 4px 0px green;
+  transition: .3s;
+}
+.product .url_btn:hover {
+  box-shadow: unset;
+  transform: translate(4px,4px);
+}
 .product a{
   margin-top: 20px;
+  margin-right: 10px;
 }
 
 footer{
