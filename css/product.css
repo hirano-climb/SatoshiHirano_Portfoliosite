@@ -122,7 +122,7 @@ main{
   box-shadow: unset;
   transform: translate(4px,4px);
 }
-.product .url_btn{
+.product .url_link_btn{
   display: inline-block;
   text-align: center;
   padding: .5em;
@@ -133,7 +133,7 @@ main{
   box-shadow: 4px 4px 0px green;
   transition: .3s;
 }
-.product .url_btn:hover {
+.product .url_link_btn:hover {
   box-shadow: unset;
   transform: translate(4px,4px);
 }
